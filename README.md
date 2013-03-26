@@ -10,12 +10,14 @@ zadd id and score (rank_key's value) as sorted set to redis from fluentd log
 
     app.event_id_001.rank {"id":"user_id", "myrank":99, "point1":100, "poit2":20}
 
-### configuration sample
+### configuration
 
  * host and port for redis server setting.
  * event_id is your application's event id.
  * rank_key is a score for sorted set.
  
+### configuration sample
+
     <match app.event_id_001.rank>
       type event_rank
       host 127.0.0.1
